@@ -3,4 +3,4 @@ EXPOSE 777
 COPY . .
 RUN pip install --upgrade pip
 RUN pip3 install -r requirements.txt
-CMD python proxy.py
+RUN -it -p 8899:8899 --rm abhinavsingh/proxy.py:latest
